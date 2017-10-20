@@ -1,0 +1,28 @@
+{
+  "name": "winston-dropbox",
+  "version": "1.0.0",
+  "description": "A winston transport to write logs to a dropbox file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node example && echo ✔"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vasanthv/winston-dropbox.git"
+  },
+  "author": "Vasanth.V",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vasanthv/winston-dropbox/issues"
+  },
+  "keywords": [
+    "winston",
+    "dropbox"
+  ],
+  "homepage": "https://github.com/vasanthv/winston-dropbox#readme",
+  "dependencies": {
+    "dropbox-fs": "^0.1.0",
+    "winston": "^2.4.0",
+    "winston-transport": "^3.0.1"
+  }
+}
