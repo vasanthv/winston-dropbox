@@ -22,7 +22,8 @@ module.exports = class winstonDropboxLogger extends Transport {
 		this.dropboxfs.readFile('/'+this.fileName+this.suffix+this.extension, {encoding: 'utf8'}, (err, result) => {
 			const content = result ? result+'\n'+msgContent : msgContent;
 			this.dropboxfs.writeFile('/'+this.fileName+this.suffix+this.extension, content, {encoding: 'utf8'}, (err, stat) => {
-				callback();
+				if(err) callback(err);
+				else callback(null);
 			});
 		});
 	}
