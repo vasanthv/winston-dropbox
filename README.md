@@ -14,13 +14,23 @@ npm install winston winston-dropbox
 const winston = require('winston');
 const winstonDropbox = require('winston-dropbox');
 
+const options = {
+	apiKey: 'DROPBOX_API_TOKEN'
+}
+
 const logger = new winston.Logger({
 	level: 'info',
 	transports: [
 		new (winston.transports.Console)({'timestamp':true}),
-		new (winstonDropbox)({apiKey: 'DROPBOX_API_TOKEN'})
+		new (winstonDropbox)(options)
 	]
 });
 
 logger.info('Hello Dropbox logger');
 ```
+
+| Options                  | Description                                                                                                                                  |
+|--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| apiKey *(Required)*      | *String*. Generate your token as mentioned here. [Generate an access token for your own account](https://blogs.dropbox.com/developers/2014/05/generate-an-access-token-for-your-own-account/)  |
+| name *(optional)*        | *String*. Default: **logs**.                                                                                                                 |
+| dailyRotate *(optional)* | *Boolean*. Default **true**.                                                                                                                 |
