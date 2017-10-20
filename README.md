@@ -34,3 +34,6 @@ logger.info('Hello Dropbox logger');
 | apiKey *(Required)*      | *String*. [Generate your own dropbox token](https://blogs.dropbox.com/developers/2014/05/generate-an-access-token-for-your-own-account/)  |
 | name *(optional)*        | *String*. Default: **logs**.                                                                                                                 |
 | dailyRotate *(optional)* | *Boolean*. Default **true**.                                                                                                                 |
+
+## License
+MIT
